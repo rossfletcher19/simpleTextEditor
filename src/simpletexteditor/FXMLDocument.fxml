@@ -14,8 +14,8 @@
       <menus>
         <Menu text="File" fx:id="fileMenu">
           <items>
-<!--            <MenuItem onAction="#saveFile" text="Save" fx:id="saveFileFxId" />
-            <MenuItem onAction="#quitApp" text="Quit" fx:id="quitAppFxId" />-->
+            <MenuItem onAction="#saveFile" text="Save" fx:id="saveFileFxId" />
+            <MenuItem onAction="#quitApp" text="Quit" fx:id="quitAppFxId" />
             <!--<MenuItem onAction="#deleteFiles" text="Delete files" fx:id="deleteFilesFxId" />-->
           </items>
         </Menu>
