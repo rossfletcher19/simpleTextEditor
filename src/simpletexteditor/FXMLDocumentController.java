@@ -13,6 +13,8 @@ import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.ResourceBundle;
+import java.util.Timer;
+import java.util.TimerTask;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
@@ -33,6 +35,7 @@ public class FXMLDocumentController implements Initializable {
     String opSystem = new String();
     String documentsPath = new JFileChooser().getFileSystemView().getDefaultDirectory().toString();
     @FXML public TextArea textArea;
+    private final TextArea textArea2 = new TextArea();
     
     
     private void createOpeningFolder(){
@@ -86,6 +89,20 @@ public class FXMLDocumentController implements Initializable {
         System.exit(0);
     }
     
+    private void runAutoSave(){
+        if (this.opSystem.contains("mac")){
+                Timer timer = new Timer();
+                TimerTask task = new AutoSaveMac();
+                timer.schedule(task, 2000, 60000);
+            } else {
+                Timer timer = new Timer();
+                TimerTask task = new AutoSave();
+                timer.schedule(task, 2000, 60000);
+            }
+    
+    
+    }
+    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
@@ -94,6 +111,60 @@ public class FXMLDocumentController implements Initializable {
         System.out.println("Operating System: "   + this.opSystem);
         textArea.setWrapText(true);
         createOpeningFolder();
+        runAutoSave();
+        
+    }
+
+class AutoSave extends TimerTask {
+      
+        @Override
+        public void run() {
+             
+            if(textArea2.getText().equals(textArea.getText())){
+                // do nothing
+            } else {
+                // autosave new folder and file if needed
+                String[] firstLineOfTextArea = textArea.getText().split("\\n");
+                String[] folderAndFileName = firstLineOfTextArea[0].split("-", 2);
+                Path path = Paths.get(documentsPath + "\\ssef\\" + folderAndFileName[0]);
+                if (Files.exists(path)) {
+                    // Do nothing
+                } else {
+                    new File(documentsPath + "\\ssef\\" + folderAndFileName[0]).mkdir();
+                }
+                File file = new File(String.format(documentsPath + "\\ssef\\" + folderAndFileName[0]+ "\\%s.txt", folderAndFileName[1] ));
+                Save(textArea.getText().replaceAll("\n", System.getProperty("line.separator")), file);
+                textArea2.setText(textArea.getText());
+            
+            }
+        } 
+    }
+    
+    class AutoSaveMac extends TimerTask {
+      
+        @Override
+        public void run() {
+             
+            if(textArea2.getText().equals(textArea.getText())){
+                // do nothing
+            } else {
+                // autosave new folder and file if needed
+                String[] firstLineOfTextArea = textArea.getText().split(System.getProperty("line.separator"));
+                System.out.println(firstLineOfTextArea[0] + " first line of textarea");
+                String[] folderAndFileName = firstLineOfTextArea[0].split("-", 2);
+                Path path = Paths.get(documentsPath + "/Documents" + "/ssef/" + folderAndFileName[0]);
+                
+                if (Files.exists(path)) {
+                    // Do nothing
+                } else {
+                    new File(documentsPath +  "/Documents" + "/ssef/" + folderAndFileName[0]).mkdir();
+                }
+                File file = new File(documentsPath + "/Documents" + "/ssef/" + folderAndFileName[0] + "/" + folderAndFileName[1]+ ".txt" );
+                Save(textArea.getText().replaceAll("/n", System.getProperty("line.separator")), file);
+                textArea2.setText(textArea.getText());
+            
+            }
+        } 
     }    
     
 }
