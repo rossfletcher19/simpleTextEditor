@@ -6,9 +6,48 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane id="AnchorPane" prefHeight="200" prefWidth="320" xmlns:fx="http://javafx.com/fxml/1" fx:controller="simpletexteditor.FXMLDocumentController">
-    <children>
-        <Button layoutX="126" layoutY="90" text="Click Me!" onAction="#handleButtonAction" fx:id="button" />
-        <Label layoutX="126" layoutY="120" minHeight="16" minWidth="69" fx:id="label" />
-    </children>
-</AnchorPane>
+<BorderPane fx:id="borderPaneRoot" prefHeight="600.0" prefWidth="1000.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="simpletexteditor.FXMLDocumentController">
+    <top>
+        
+    
+    <MenuBar fx:id="menuBarFxId">
+      <menus>
+        <Menu text="File" fx:id="fileMenu">
+          <items>
+<!--            <MenuItem onAction="#saveFile" text="Save" fx:id="saveFileFxId" />
+            <MenuItem onAction="#quitApp" text="Quit" fx:id="quitAppFxId" />-->
+            <!--<MenuItem onAction="#deleteFiles" text="Delete files" fx:id="deleteFilesFxId" />-->
+          </items>
+        </Menu>
+        <Menu text="Help" fx:id="helpMenu">
+          <items>
+<!--             <MenuItem onAction="#howToPopup" text="How To" />
+             <MenuItem onAction="#aboutpopup" text="About" />-->
+          </items>
+        </Menu>
+      </menus>
+    </MenuBar>
+    
+    
+  </top>
+  
+  
+<!--      <right>
+      
+    </right>-->
+    
+  <center>
+      
+    <TextArea fx:id="textArea" />
+  </center>
+<!--  <left>
+   
+  </left>-->
+  
+  <bottom>
+      <HBox spacing="10" alignment="top_right">
+
+    </HBox>
+    </bottom>
+  
+</BorderPane>
