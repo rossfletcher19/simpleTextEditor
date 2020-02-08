@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="simpletexteditor.controllers.HowtoFXMLController">
+    <children>
+    <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It's super simple! Thanks for stopping by!">
+      <font>
+        <Font size="24.0" />
+      </font>
+    </Text>
+  </children>
+    <stylesheets>
+        <URL value="@/simpletexteditor/css/howtofxml.css"/>
+    </stylesheets>
+</AnchorPane>

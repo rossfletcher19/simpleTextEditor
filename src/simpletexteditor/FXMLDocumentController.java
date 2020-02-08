@@ -19,10 +19,15 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
+import javafx.stage.Modality;
 import javafx.stage.Stage;
 import javax.swing.JFileChooser;
 
@@ -70,6 +75,19 @@ public class FXMLDocumentController implements Initializable {
 
             Save(textArea.getText().replaceAll("\n", System.getProperty("line.separator")), file);
         } 
+    }
+    
+    @FXML
+    private void howToPopup(ActionEvent event) throws IOException{
+        Parent root = FXMLLoader.load(getClass().getResource("/simpletexteditor/fxml/howtoFXML.fxml"));
+        final Stage dialog = new Stage();
+        dialog.getIcons().add(new Image("/simpletexteditor/resources/pencil.png"));
+        dialog.setTitle("Super Simple Editor - How To");
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.initOwner(primaryStage);
+        Scene dialogScene = new Scene(root);
+        dialog.setScene(dialogScene);
+        dialog.show();
     }
     
     private void Save(String content, File file){
