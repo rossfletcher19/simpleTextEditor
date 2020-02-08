@@ -90,6 +90,23 @@ public class FXMLDocumentController implements Initializable {
         dialog.show();
     }
     
+    @FXML
+    private void aboutpopup(ActionEvent event){
+        final Stage dialog = new Stage();
+        dialog.getIcons().add(new Image("/simpletexteditor/resources/pencil.png"));
+        dialog.setTitle("Super Simple Editor");
+        TextArea textArea = new TextArea();
+        dialog.initModality(Modality.APPLICATION_MODAL);
+        dialog.initOwner(primaryStage);
+        textArea.setWrapText(true);
+        textArea.setEditable(false);
+        textArea.setText("This editor was created to use with notation formatting languages like Jira's Text Formatting Notation or simple note taking and writing for all of your thoughts. Contact rtbfletch at outlook dot com with any quetions or input. ");
+        Scene dialogScene = new Scene(textArea, 300, 200);
+        dialog.setScene(dialogScene);
+        dialog.show();
+           
+    }
+    
     private void Save(String content, File file){
         try {
             FileWriter fileWriter;

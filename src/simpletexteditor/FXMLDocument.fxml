@@ -22,7 +22,7 @@
         <Menu text="Help" fx:id="helpMenu">
           <items>
              <MenuItem onAction="#howToPopup" text="How To" />
-<!--             <MenuItem onAction="#aboutpopup" text="About" />-->
+             <MenuItem onAction="#aboutpopup" text="About" />
           </items>
         </Menu>
       </menus>
