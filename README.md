@@ -1,13 +1,13 @@
 # _SuperSimpleEditor_
 
-#### _A simple text editor I created that will auto save text files. In my work I found myself having to type out longer analytical comments and I was afraid of loosing my work at times. I used notepad for a bit but thought this would make a fun project. The main feature is auto saving txt files._
+#### _A simple text editor I created that will auto save text files. In my work I found myself having to type out longer analytical comments and I was afraid of losing my work at times. I used notepad for a bit but thought this would make a fun project. The main feature is auto saving txt files._
 
 #### By _**Ross Fletcher 2/2020**_
 
 ## Features
   * Runs on Windows PC and Mac.
   * Auto saving every minute if changes are detected.
-  * A folder titled 'ssef' (super simple editor files) will automatically be created in your docements folder. This is where your folders and text files will be saved.
+  * A folder titled 'ssef' (super simple editor files) will automatically be created in your documents folder. This is where your folders and text files will be saved.
   * The first line of the TextArea should be formatted as follows for quick file creation and saving. `foldername-filename` and avoid using characters `\ / : * ? < > |` If you edit the `foldername` or `filename` of the first line of the TextArea and let a minute go by, a new folder or file will be created.
 
 ## Download the .jar
