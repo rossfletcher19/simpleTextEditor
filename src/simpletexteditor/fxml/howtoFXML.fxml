@@ -11,51 +11,9 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.VBox?>
 
-<!--<AnchorPane id="AnchorPane" prefHeight="400" prefWidth="600" styleClass="mainFxmlClass" xmlns:fx="http://javafx.com/fxml/1" fx:controller="simpletexteditor.controllers.HowtoFXMLController">
-    
-    
-    
-        
-    <children>
-        
-        
-        <VBox fx:id="vbox1">
-            <Text layoutX="14.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="It's super simple! Thanks for stopping by!">
-                <font>
-                  <Font size="24.0" />
-                </font>
-            </Text>
-            <Text layoutX="28.0" layoutY="80.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Please click the link below to be taken to the repo and README for more instuctions on how to use the app! Thank you so much again for taking a look at the app!">
-                <font>
-                  <Font size="18.0" />
-                </font>
-            </Text>
-            <Hyperlink fx:id="link1" text="Click me" onAction="#linkToReadMe"   />
-        
-     
-        </VBox>
-        
-        
-    </children>
-    <children>
-        <ImageView fitHeight="600" fitWidth="600" pickOnBounds="true" preserveRatio="true">
-               <image>
-                  <Image url="@../resources/appShot1.gif" />
-               </image>
-         </ImageView>
-  </children>
-    <stylesheets>
-        <URL value="@/simpletexteditor/css/howtofxml.css"/>
-    </stylesheets>
-</AnchorPane>-->
-
 <BorderPane fx:id="borderPaneRoot" prefHeight="300.0" prefWidth="600.0" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/2.2" fx:controller="simpletexteditor.controllers.HowtoFXMLController">
     <top>
         
-    
-    
-    
-    
   </top>
   
   
