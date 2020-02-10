@@ -11,21 +11,21 @@
   * The first line of the TextArea should be formatted as follows for quick file creation and saving. `foldername-filename` and avoid using characters `\ / : * ? < > |` If you edit the `foldername` or `filename` of the first line of the TextArea and let a minute go by, a new folder or file will be created.
 
 ## Download the .jar
-  * You can download a recent build [HERE](https://1drv.ms/u/s!AneM9LVKuaTEmb1qJX7Fu7INMx4trQ?e=Pdiz4f) in .jar format. All you need is Java to run the .jar file.
+  * You can download a recent build [HERE](https://1drv.ms/u/s!AneM9LVKuaTEmb1rtqqml3P6LSKskA?e=mIFhXj) in .jar format. All you need is Java to run the .jar file.
 
 ## App Images
 
 #### Main view of app.
 
-![alt text](https://github.com/rossfletcher19/simpleTextEditor/blob/master/appShot1.gif "Main View of App")
+![alt text](https://github.com/rossfletcher19/simpleTextEditor/blob/master/src/simpletexteditor/resources/appShot1.gif "Main View of App")
 
 #### Reference Jira Text Formatting Notation or other formatting syntax, and format your text. Also, never lose your work again!:wink:
 
-![alt text](https://github.com/rossfletcher19/simpleTextEditor/blob/master/appShot2.gif "Reference Jira Text Formatting Notation or other formatting syntax")
+![alt text](https://github.com/rossfletcher19/simpleTextEditor/blob/master/src/simpletexteditor/resources/appShot2.gif "Reference Jira Text Formatting Notation or other formatting syntax")
 
 #### Then paste your formatted text in the Jira wiki renderer or where you need it. Now send it! Voila!
 
-![alt text](https://github.com/rossfletcher19/simpleTextEditor/blob/master/appShot3.gif "Then paste your formatted text in the Jira wiki renderer or where you need it. Now send it!")
+![alt text](https://github.com/rossfletcher19/simpleTextEditor/blob/master/src/simpletexteditor/resources/appShot3.gif "Then paste your formatted text in the Jira wiki renderer or where you need it. Now send it!")
 
 
   
