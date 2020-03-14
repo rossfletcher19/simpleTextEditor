@@ -23,7 +23,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
-import javafx.scene.control.Label;
 import javafx.scene.control.TextArea;
 import javafx.scene.image.Image;
 import javafx.stage.FileChooser;
@@ -95,13 +94,13 @@ public class FXMLDocumentController implements Initializable {
         final Stage dialog = new Stage();
         dialog.getIcons().add(new Image("/simpletexteditor/resources/pencil.png"));
         dialog.setTitle("Super Simple Editor");
-        TextArea textArea = new TextArea();
+        TextArea aboutTextArea = new TextArea();
         dialog.initModality(Modality.APPLICATION_MODAL);
         dialog.initOwner(primaryStage);
-        textArea.setWrapText(true);
-        textArea.setEditable(false);
-        textArea.setText("This editor was created to use with notation formatting languages like Jira's Text Formatting Notation or simple note taking and writing for all of your thoughts. Contact rtbfletch at outlook dot com with any quetions or input. ");
-        Scene dialogScene = new Scene(textArea, 300, 200);
+        aboutTextArea.setWrapText(true);
+        aboutTextArea.setEditable(false);
+        aboutTextArea.setText("This editor was created to use with notation formatting languages like Jira's Text Formatting Notation or simple note taking and writing for all of your thoughts. Contact rtbfletch at outlook dot com with any quetions or input. ");
+        Scene dialogScene = new Scene(aboutTextArea, 300, 200);
         dialog.setScene(dialogScene);
         dialog.show();
            
