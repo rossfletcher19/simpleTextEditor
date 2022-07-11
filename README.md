@@ -11,7 +11,7 @@
   * The first line of the TextArea should be formatted as follows for quick file creation and saving. `foldername-filename` and avoid using characters `\ / : * ? < > |` If you edit the `foldername` or `filename` of the first line of the TextArea and let a minute go by, a new folder or file will be created.
 
 ## Download the .jar
-  * You can download a recent build [HERE](https://1drv.ms/u/s!AneM9LVKuaTEmb1rtqqml3P6LSKskA?e=mIFhXj) in .jar format. All you need is Java to run the .jar file.
+  * You can download a recent build [HERE](https://1drv.ms/u/s!AneM9LVKuaTEmb1rdkq_jrZP4Y1UHw?e=Y6ntsx) in .jar format. All you need is Java to run the .jar file.
 
 ## App Images
 
